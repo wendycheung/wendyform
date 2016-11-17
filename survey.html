@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
 
-    <title>Wendy Cheung</title>
+    <title>Friends of Women Resource Center</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -41,24 +41,58 @@
             <li role="presentation" class="active"><a href="#">Survey</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Wendy Cheung</h3>
+        <h3 class="text-muted">Friends of Women Resource Center</h3>
       </div>
 
       <h4>Please answer the following questions:</h4>
       <br>
       <form>
-          <h5 class="text-muted">What is your gender?</h5>
-          <label class="radio-inline"><input type="radio" name="gender"> Male</label>
-          <label class="radio-inline"><input type="radio" name="gender"> Female</label>
+          <h5 class="text-muted">What is your age?</h5>
+          <label class="radio-inline"><input type="radio" name="age"> 15-18</label>
+          <label class="radio-inline"><input type="radio" name="age"> 18-35</label>
+          <label class="radio-inline"><input type="radio" name="age"> 35-50</label>
+          <label class="radio-inline"><input type="radio" name="age"> 50+</label>
       </form>
       <br>
       <form>
-          <h5 class="text-muted">What is your most comfortable language?</h5>
-          <label class="radio-inline"><input type="radio" name="language"> English</label>
-          <label class="radio-inline"><input type="radio" name="language"> French</label>
+          <span class="help-block">Name:</span>
+          <input type="text" class="form-control" placeholder="Optional">
       </form>
       <br>
-      <div class="form-group">
+      <form>
+          <span class="help-block">Phone Number:</span>
+          <input type="text" class="form-control" placeholder="Optional">
+      </form>
+      <br>
+      <form>
+          <h5 class="text-muted">Are you married to your partner?</h5>
+          <label class="radio-inline"><input type="radio" id="married">Yes</label>
+          <label class="radio-inline"><input type="radio">No</label>
+      </form>
+      <br>
+      <form>
+          <h5 class="text-muted">Check all that you feel apply to you:</h5>
+          <label class="radio-inline"><input type="radio" id="emotional">Emotional Abuse</label>
+          <label class="radio-inline"><input type="radio" id="physical">Physical Abuse</label>
+          <label class="radio-inline"><input type="radio" id="finabuse">Financial Abuse</label>
+          <input type="text" class="form-control" placeholder="Description">
+      </form>
+      <br>
+      <form>
+          <h5 class="text-muted">What information do you seek today?</h5>
+          <label class="radio-inline"><input type="radio" id="legal">Legal Counseling</label>
+          <label class="radio-inline"><input type="radio" id="psych">Psychological Counseling</label>
+          <label class="radio-inline"><input type="radio" id="house">Housing/Shelter</label>
+          <label class="radio-inline"><input type="radio" id="finance">Financial Advising</label>
+      </form>
+      <br>
+      <form>
+          <h5 class="text-muted">Do you have children under the age of 18?</h5>
+          <label class="radio-inline"><input type="radio" name="child">Yes</label>
+          <label class="radio-inline"><input type="radio" name="child">No</label>
+      </form>
+      <br>
+      <!-- <div class="form-group">
         <h5 class="text-muted">What is your date of birth?</h5>
         <div class="col-xs-3">
             <select class="form-control">
@@ -76,36 +110,16 @@
             </select>
         </div>
       </div>
-      <br><br>
-      <form>
-          <span class="help-block">What is your favorite type of soup?</span>
-          <input type="text" class="form-control" placeholder="Chicken Noodle">
-      </form>
-      <br>
-      <form>
-          <span class="help-block">What is your favorite song?</span>
-          <input type="text" class="form-control" placeholder="Firework- Katy Perry">
-      </form>
-      <br>
-      <form>
-          <span class="help-block">What is your favorite type of dog?</span>
-          <input type="text" class="form-control" placeholder="Golden Retriever">
-      </form>
-      <br>
-      <form>
-          <span class="help-block">Who is your best friend?</span>
-          <input type="text" class="form-control" placeholder="Michelle Obama">
-      </form>
-      <br>
-      <br>
+      <br><br> -->
+      <!-- <br>
       <div class="form-group">
               <label class="checkbox-inline">
                   <input type="checkbox" value="agree">  I want to receive additional information
               </label>
-      </div>
+      </div> -->
       <div class="form-group">
-              <input type="submit" class="btn btn-primary" value="Submit">
-              <input type="reset" class="btn btn-default" value="Reset">
+              <input type="submit" class="btn btn-primary" value="Submit" onclick="submit()">
+              <input type="reset" class="btn btn-default" value="Reset" onclick="reset()">
       </div>
       <br>
       <footer class="footer">
@@ -116,6 +130,43 @@
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    <script>
+    //Submit button links to relevant resources
+    function submit() {
+      if (document.getElementById('emotional').checked) {
+        window.open("https://www.futureswithoutviolence.org/the-facts-on-preventing-violence-against-women-and-children/")
+      }
+      else if (document.getElementById('physical').checked) {
+        window.open("https://www.futureswithoutviolence.org/resources-events/get-the-facts/")
+      }
+      else if (document.getElementById('finabuse').checked) {
+        window.open("https://www.futureswithoutviolence.org/justice-for-all-ending-elder-abuse-neglect-and-financial-exploitation/")
+      }
+      else if (document.getElementById('legal').checked) {
+        window.open("https://www.futureswithoutviolence.org/what-domestic-violence-survivors-need-to-know-about-affordable-health-care/")
+      }
+      else if (document.getElementById('psych').checked) {
+        window.open("https://www.futureswithoutviolence.org/domestic-violence-mental-health-and-substance-use-coercion/")
+      }
+      else if (document.getElementById('house').checked) {
+        window.open("https://www.futureswithoutviolence.org/the-facts-on-housing-and-domestic-violence/")
+      }
+      else if (document.getElementById('finance').checked) {
+        window.open("https://www.futureswithoutviolence.org/new-resource-survivor-brochure/")
+      }
+      else if (document.getElementById('married').checked) {
+        window.open("https://www.futureswithoutviolence.org/if-you-think-child-marriage-doesnt-exist-in-the-us-think-again/")
+      }
+      else {
+        window.open("https://fowomensite.wordpress.com/")
+      }
+    }
+
+    //Submit button clears buttons
+    function reset() {
+      location.reload()
+    }
+    </script>
   </body>
 </html>
